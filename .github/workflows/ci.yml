@@ -13,9 +13,8 @@ jobs:
                 java-version: 11 
             -  run: mvn clean install 
             -  run: cd redis
-            -  run: sudo apt-get install wget
-            -  run: sudo apt-get install tar
-            -  run: sudo apt-get install make 
+            -  run: sudo apt-get install redis-server
+            -  run: sudo redis-server & 
             - name: Ballerina Build
               uses: ballerina-platform/ballerina-action/@swan-lake-connector-release
               with:
