@@ -14,8 +14,9 @@ jobs:
             -  run: mvn clean install 
             -  run: cd redis
             -  run: sudo apt-get install redis-server
-            -  run: sudo redis-server 
+            -  run: sudo redis-server & 
             -  run: redis-cli ping
+            -  run: ps aux | grep redis 
 
             - name: Ballerina Build
               uses: ballerina-platform/ballerina-action/@swan-lake-connector-release
