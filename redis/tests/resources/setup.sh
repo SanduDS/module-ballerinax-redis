@@ -14,6 +14,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-wget http://download.redis.io/releases/redis-5.0.7.tar.gz
-tar xzf redis-5.0.7.tar.gz
-make all -C redis-5.0.7/src
+sudo wget http://download.redis.io/releases/redis-5.0.7.tar.gz
+sudo tar xzf redis-5.0.7.tar.gz
+sudo make all -C redis-5.0.7/src
