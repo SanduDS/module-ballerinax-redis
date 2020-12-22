@@ -23,7 +23,7 @@ jobs:
             -  run: sudo unzip  ballerina-swan-lake-preview8.zip
             -  run: sudo ls
             -  run: sudo pwd  
-            -  run: /github/workspace/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina build redis
+            -  run: /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina build redis
                env: 
                   JAVA_HOME: /usr/lib/jvm/default-jvm
                   JAVA_OPTS: -DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true
