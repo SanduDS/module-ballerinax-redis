@@ -11,25 +11,19 @@ jobs:
               uses: actions/setup-java@v1
               with:
                 java-version: 11 
-            -  run: mvn clean install 
-            #-  run: cd redis
-            #-  run: sudo apt-get update
-            #-  run: sudo apt-get install redis-server
-            #-  run: sudo redis-server & 
-            #-  run: redis-cli ping
-            #-  run: ps aux | grep redis
-            -  run: sudo wget https://dist.ballerina.io/downloads/swan-lake-preview8/ballerina-swan-lake-preview8.zip
-            -  run: sudo apt-get install -y unzip
-            -  run: sudo unzip  ballerina-swan-lake-preview8.zip
-            -  run: sudo ls
-            -  run: sudo pwd
-               env: 
+            - name: Maven Build
+              run: mvn clean install 
+            - name: Ballerina Download
+              run: sudo wget https://dist.ballerina.io/downloads/swan-lake-preview8/ballerina-swan-lake-preview8.zip
+            - name: Use Ballerina zip version
+              run: sudo apt-get install -y unzip
+            - run: sudo unzip  ballerina-swan-lake-preview8.zip
+              env: 
                   JAVA_HOME: /usr/lib/jvm/default-jvm
                   JAVA_OPTS: -DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true 
-            -  run: /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina build redis
-            -  name: Test Ballerina Push
-               run: cd /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/redis
-            -  run: /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina push
+            - name: Ballerina Build 
+              run: /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina build redis
+
           
           
                 
