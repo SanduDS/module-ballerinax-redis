@@ -28,7 +28,7 @@ jobs:
                   JAVA_OPTS: -DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true 
             -  run: /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina build redis
             -  name: Test Ballerina Push
-            -  run: cd /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/redis
+               run: cd /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/redis
             -  run: /home/runner/work/module-ballerinax-redis/module-ballerinax-redis/ballerina-swan-lake-preview8/bin/ballerina push
           
           
