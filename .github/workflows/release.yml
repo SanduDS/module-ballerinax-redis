@@ -34,4 +34,3 @@ jobs:
             JAVA_HOME: /usr/lib/jvm/default-jvm
             WORKING_DIR: ./redis
             BALLERINA_CENTRAL_ACCESS_TOKEN: ${{ secrets.BALLERINA_CENTRAL_ACCESS_TOKEN }}
-        
