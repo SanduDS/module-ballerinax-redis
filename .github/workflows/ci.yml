@@ -22,11 +22,7 @@ jobs:
             -  run: sudo apt-get install -y unzip
             -  run: sudo unzip  ballerina-swan-lake-preview8.zip
             -  run: sudo ls  
-            -  uses: ballerina-platform/ballerina-action/@swan-lake-connector-release
-               with:
-                  args:
-                      build -c  redis
-              
+            -  run: sudo /github/workspace/redis/ballerina-swan-lake-preview8/bin/ballerina build redis
                env: 
                   JAVA_HOME: /usr/lib/jvm/default-jvm
                   JAVA_OPTS: -DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true
