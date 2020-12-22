@@ -46,7 +46,7 @@ import static org.ballerinalang.redis.Constants.REDIS_EXCEPTION_OCCURRED;
  */
 public class RedisDbUtils {
     private static RedisServer redisServer;
-    private static final String REDIS_HOST = "127.0.0.1";
+    private static final String REDIS_HOST = "localhost";
     private static final int REDIS_PORT = 6379;
     private static RedisCommands<String, String> redisCommands;
     private static final Module PACKAGE_ID_REDIS = new Module("ballerinax", "redis",
